@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Product
+class Superuser
 {
     private $name;
 
