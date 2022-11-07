@@ -15,8 +15,12 @@ class User
 
     public function setName($name)
     {
-        $this->name = $name;
+        if (strlen($name) > 3) {
+
+            $this->name = $name;
+        }
     }
+
 
     public function getAge()
     {
@@ -25,8 +29,7 @@ class User
 
     public function setAge($age)
     {
-        if ($age >= 18)
-        {
+        if ($age >= 18) {
             $this->age = $age;
         }
     }

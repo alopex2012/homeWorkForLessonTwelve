@@ -2,12 +2,13 @@
 
 namespace App;
 
-class Employee extends User
+class Employee extends Superuser
 {
-    protected $salary;
+    private $salary;
 
-    public function setSalary($salary)
+    public function __construct($name, $surname, $birthday, $salary)
     {
+        parent::__construct($name, $surname, $birthday);
         $this->salary = $salary;
     }
 

@@ -40,9 +40,15 @@ echo "<pre>",
 $newUser = new User(); //create an instance of the class
 $newUser->setName("Ahmet");
 $newUser->setAge(28);
-echo("Name: " . $newUser->getName() . " " . "Age: " . $newUser->getAge()); //display $newUser information
-
+//display $newUser information
+echo("Name: " . $newUser->getName() . " " . "Age: " . $newUser->getAge());
 echo "<br />";
+
+$newStudent = new Student(); //create an instance of the class
+$newStudent->setName("Ahmad");
+$newStudent->setAge(22);
+//display $newStudent information
+echo("Name: " . $newStudent->getName() . " " . "Age: " . $newStudent->getAge());
 
 echo "<hr />";
 
@@ -61,10 +67,14 @@ echo "<pre>",
     ",
 "</pre>";
 
-$newSuperuser = new Superuser(); //create an instance of the class
-
+//create an instance of the class
+$newSuperuser = new Superuser("Ibrahim", "Sherhani", "1973-07-03");
+//display $newSuperuser information
+echo("Name: " . $newSuperuser->getName() . " " . "Birthday: " . $newSuperuser->getBirthday() . " " . "Age: " . $newSuperuser->getAge());
 echo "<br />";
-
+$newSuperuser1 = new Superuser("Ilhan", "Chambek", "1988-12-22");
+//display $newSuperuser1 information
+echo "Name: " . $newSuperuser1->getName() . " " . "Birthday: " . $newSuperuser1->getBirthday() . " " . "Age: " . $newSuperuser1->getAge();
 echo "<hr />";
 
 echo "<pre>",
@@ -74,11 +84,10 @@ echo "<pre>",
     Зарплата повинна передаватися четвертим параметром конструктор об'єкта. 
     Зробіть також геттер для цієї властивості.    ",
 "</pre>";
-
-$newEmployee = new Employee(); //create an instance of the class
-
-echo("Name: " . $newEmployee->getName() . " " . "Age: " . $newEmployee->getAge()); //display $newEmployee information
-echo "<br />";
+//create an instance of the class
+$newEmployee = new Employee("Mirza", "Immadulo", "1990-09-11", 3500);
+//display $newEmployee information
+echo("Name: " . $newEmployee->getName() . " " . "Birthday: " . $newEmployee->getBirthday() . " " . "Salary: " . $newEmployee->getSalary());
 
 echo "<hr />";
 
@@ -90,8 +99,11 @@ echo "<pre>",
      на той самий об'єкт.",
 "</pre>";
 
-$newProduct = new Product(); //create an instance of the class
+$product1 = new Product("Car", 20000); //create an instance of the class
+echo("Name product1: " . $product1->getName() . " " . "Price product1: " . $product1->getPrice());
 echo "<br />";
+$product2 = $product1;
+echo("Name product2: " . $product2->getName() . " " . "Price product2: " . $product2->getPrice());
 
 echo "<hr />";
 
