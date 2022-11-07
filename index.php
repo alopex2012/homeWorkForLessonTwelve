@@ -84,6 +84,7 @@ echo "<pre>",
     Зарплата повинна передаватися четвертим параметром конструктор об'єкта. 
     Зробіть також геттер для цієї властивості.    ",
 "</pre>";
+
 //create an instance of the class
 $newEmployee = new Employee("Mirza", "Immadulo", "1990-09-11", 3500);
 //display $newEmployee information
