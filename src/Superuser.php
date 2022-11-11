@@ -41,7 +41,7 @@ class Superuser
     {
         //split the string with the date of birth into components and add to the array
         $dateOfBirth = explode("-", $birthday);
-
+        //check if the date of birth is less than the current date
         if (($dateOfBirth[1] <= date("m")) && ($dateOfBirth[2] <= date("d"))) {
             return date("Y") - $dateOfBirth[0];
         } else {

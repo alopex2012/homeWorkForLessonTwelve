@@ -9,7 +9,7 @@ class Student extends User
     public function setName($name)
     {
         if (strlen($name) < 10) {
-
+            //assign a name using the method of the parent class
             parent::setName($name);
         }
     }
